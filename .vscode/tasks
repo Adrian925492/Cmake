@@ -1,0 +1,34 @@
+# 1 "/home/adrian/Desktop/MyProjects/HelloWorld_project1/.vscode/tasks.json"
+# 1 "/usr/bin//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 31 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 32 "<command-line>" 2
+# 1 "/home/adrian/Desktop/MyProjects/HelloWorld_project1/.vscode/tasks.json"
+{
+ "version": "2.0.0",
+ "tasks": [
+  {
+   "type": "shell",
+   "label": "shell: cpp build active file",
+   "command": "g++",
+   "args": [
+    "-g",
+    "${file}",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}"
+   ],
+   "options": {
+    "cwd": "/usr/bin"
+   },
+   "problemMatcher": [
+    "$gcc"
+   ],
+   "group": {
+    "kind": "build",
+    "isDefault": true
+   }
+  }
+ ]
+}
