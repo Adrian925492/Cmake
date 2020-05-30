@@ -3,12 +3,25 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "shell: cpp build active file",
-			"command": "g++",
+			"label": "shell: buld project",
+			"command": "make",
 			"args": [
-				"main.cpp",
-				"-o",
-				"program.out"
+				"all"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "shell: clean project",
+			"command": "make",
+			"args": [
+				"clean"
 			],
 			"problemMatcher": [
 				"$gcc"
