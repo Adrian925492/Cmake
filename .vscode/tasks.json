@@ -4,8 +4,13 @@
 		{
 			"type": "shell",
 			"label": "shell: buld project",
-			"command": "make",
+			"command": "docker",
 			"args": [
+				"run",
+				"-v",
+				"${PWD}:/Source",
+				"adrian9254/cmake:v0.1",
+				"make",
 				"all"
 			],
 			"problemMatcher": [
@@ -14,13 +19,21 @@
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"presentation": {
+				"showReuseMessage": false
+		   }
 		},
 		{
 			"type": "shell",
 			"label": "shell: clean project",
-			"command": "make",
+			"command": "docker",
 			"args": [
+				"run",
+				"-v",
+				"${PWD}:/Source",
+				"adrian9254/cmake:v0.1",
+				"make",
 				"clean"
 			],
 			"problemMatcher": [
@@ -29,7 +42,10 @@
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"presentation": {
+				"showReuseMessage": false
+		   }
 		}
 	]
 }
