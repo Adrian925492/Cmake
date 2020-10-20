@@ -1,4 +1,0 @@
-# Target labels
- ut_add_label
-# Source files and their labels
-/repo/Cmake/train3_test/test/add/ut_add.cpp

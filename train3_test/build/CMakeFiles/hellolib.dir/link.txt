@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/hellolib.dir/main.cpp.o  -o hellolib  libmyMath.a add/libadd.a substract/libsubstract.a 

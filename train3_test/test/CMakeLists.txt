@@ -9,6 +9,9 @@ find_package(GTest REQUIRED CONFIG)
 add_subdirectory(add)
 add_subdirectory(substract)
 
+# Include test data
+add_subdirectory(test_data)
+
 # Create test binary
 add_executable(mymath_test
     ut_mymath.cpp

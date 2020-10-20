@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/add_test.dir/ut_add.cpp.o  -o add_test  ../../add/libadd.a /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a -lpthread 

@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/substract_test.dir/ut_substract.cpp.o  -o substract_test  ../../substract/libsubstract.a /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a -lpthread 

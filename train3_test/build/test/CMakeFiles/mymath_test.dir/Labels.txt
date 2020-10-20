@@ -1,4 +1,0 @@
-# Target labels
- ut_mymath_label
-# Source files and their labels
-/repo/Cmake/train3_test/test/ut_mymath.cpp
