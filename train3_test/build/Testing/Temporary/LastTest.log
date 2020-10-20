@@ -1,0 +1,105 @@
+Start testing: Oct 20 18:41 UTC
+----------------------------------------------------------
+1/3 Testing: ut_mymath
+1/3 Test: ut_mymath
+Command: "/repo/Cmake/train3_test/build/test/mymath_test"
+Directory: /repo/Cmake/train3_test/build/test
+"ut_mymath" start time: Oct 20 18:41 UTC
+Output:
+----------------------------------------------------------
+Running main() from /repo/Cmake/train3_test/framework/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Math_test
+[ RUN      ] Math_test.initial_test
+/repo/Cmake/train3_test/test/ut_mymath.cpp:5: Failure
+Value of: false
+  Actual: false
+Expected: true
+[  FAILED  ] Math_test.initial_test (0 ms)
+[----------] 1 test from Math_test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Math_test.initial_test
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"ut_mymath" end time: Oct 20 18:41 UTC
+"ut_mymath" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: ut_add
+2/3 Test: ut_add
+Command: "/repo/Cmake/train3_test/build/test/add/add_test"
+Directory: /repo/Cmake/train3_test/test/add
+"ut_add" start time: Oct 20 18:41 UTC
+Output:
+----------------------------------------------------------
+Running main() from /repo/Cmake/train3_test/framework/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Add_test
+[ RUN      ] Add_test.initial_test
+/repo/Cmake/train3_test/test/add/ut_add.cpp:5: Failure
+Value of: false
+  Actual: false
+Expected: true
+[  FAILED  ] Add_test.initial_test (0 ms)
+[----------] 1 test from Add_test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Add_test.initial_test
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"ut_add" end time: Oct 20 18:41 UTC
+"ut_add" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: ut_substract
+3/3 Test: ut_substract
+Command: "/repo/Cmake/train3_test/build/test/substract/substract_test"
+Directory: /repo/Cmake/train3_test/build/test/substract
+"ut_substract" start time: Oct 20 18:41 UTC
+Output:
+----------------------------------------------------------
+Running main() from /repo/Cmake/train3_test/framework/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Substract_test
+[ RUN      ] Substract_test.initial_test
+/repo/Cmake/train3_test/test/substract/ut_substract.cpp:5: Failure
+Value of: false
+  Actual: false
+Expected: true
+[  FAILED  ] Substract_test.initial_test (0 ms)
+[----------] 1 test from Substract_test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Substract_test.initial_test
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"ut_substract" end time: Oct 20 18:41 UTC
+"ut_substract" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 20 18:41 UTC

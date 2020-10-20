@@ -9,6 +9,9 @@ project(myMathLib VERSION 1.0.0)
 # Include settings
 include(config/cmake_config.cmake)
 
+# Enable test module - in top - level CMakeLists.txt
+include(CTest)
+
 # Include subdrectories - with add and substract library to the cmake tree
 # The tree will look like:
 #       mymath
@@ -46,3 +49,8 @@ target_link_libraries(
     PRIVATE
         myMath
 )
+
+# Include test subdirectory
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()

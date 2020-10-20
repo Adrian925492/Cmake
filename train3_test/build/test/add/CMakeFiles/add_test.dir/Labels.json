@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/repo/Cmake/train3_test/test/add/ut_add.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ut_add_label"
+		],
+		"name" : "add_test"
+	}
+}

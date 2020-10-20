@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/repo/Cmake/train3_test/test/ut_mymath.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ut_mymath_label"
+		],
+		"name" : "mymath_test"
+	}
+}
