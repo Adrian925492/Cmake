@@ -40,7 +40,7 @@ if (CMAKE_PROJECT_NAME STREQUAL myMathLib)
 
     # Install includes
     install(DIRECTORY 
-        include/        # Source - header API
+        include/myMath        # Source - header API
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}     # Destination
     )
 endif()

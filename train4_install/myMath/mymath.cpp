@@ -1,4 +1,4 @@
-#include <mymath/mymath.h>
+#include <myMath/mymath.h>
 #include <add/add.h>
 #include <substract/substract.h>
 

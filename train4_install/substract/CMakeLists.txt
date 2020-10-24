@@ -39,7 +39,7 @@ if(CMAKE_PROJECT_NAME STREQUAL myMathLib)
 
     #And install includes - API - will copy include folder content to installdir
     install(DIRECTORY 
-        ${CMAKE_CURRENT_SOURCE_DIR}/include # Source dir
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/substract # Source dir
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}  # Destination dir
     )
 endif()

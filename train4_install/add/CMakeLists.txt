@@ -8,7 +8,7 @@ project(add VERSION 1.0.0 LANGUAGES C)
 
 # Create add library (explicitly static)
 add_library(
-    add
+    ${PROJECT_NAME}
     STATIC
     add.c
     include/add/add.h
@@ -18,7 +18,7 @@ add_library(
 add_library(myMathLib::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 # Include current source directory (with header api) as an Interface to the project.
-# That will allow user of add to include it via <add.h>.
+# That will allow user of add to include it via <aadd/dd.h>.
 target_include_directories(add
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>      # If used directly from sources - include "include" directory

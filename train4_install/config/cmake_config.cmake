@@ -50,6 +50,8 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     # Include GNUInstall dirs - so we would know the directories
     include(GNUInstallDirs)
 
+    set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install)
+
     # Print currently set install dirs
     message(STATUS "CMAKE_INSTALL_PREFIX        = ${CMAKE_INSTALL_PREFIX}")
     message(STATUS "CMAKE_INSTALL_LIBDIR        = ${CMAKE_INSTALL_LIBDIR}")
@@ -59,7 +61,7 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
     # Export config file - install it in installdir
     install(
         FILES
-            ${CMAKE_CURRENT_BINARY_DIR}/cmake_config.cmake
+            ${CMAKE_CURRENT_SOURCE_DIR}/config/cmake_config.cmake
         DESTINATION
             ${CMAKE_INSTALL_LIBDIR}/config/myMathLib
     )
