@@ -1,6 +1,6 @@
-#include "mymath.h"
-#include "add.h"
-#include "substract.h"
+#include <mymath/mymath.h>
+#include <add/add.h>
+#include <substract/substract.h>
 
 int math::plus(int x, int y) noexcept
 {

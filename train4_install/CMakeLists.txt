@@ -10,47 +10,40 @@ project(myMathLib VERSION 1.0.0)
 include(config/cmake_config.cmake)
 
 # Enable test module - in top - level CMakeLists.txt
-include(CTest)
+#include(CTest)
 
 # Include subdrectories - with add and substract library to the cmake tree
 # The tree will look like:
-#       mymath
-#      /  |  \
+#       mymath  - myMath
+#      /  |  \  
 #    add  |   CONFIG
 #      substract
 #
 add_subdirectory(add)
 add_subdirectory(substract)
+add_subdirectory(myMath)
 
-# Define a library
-add_library(myMath  #[can be STATIC or SHARED]
-    mymath.h
-    mymath.cpp
-)
-
-# Define alias library - to not allow to change MyMath lib by its users
-# The used form would be myMathLib::myMath
-add_library(${CMAKE_PROJECT_NAME}::myMath ALIAS myMath)
-
-# Link dependencies
-target_link_libraries(myMath
-    PUBLIC  # For current target and targets that will use it
-        myMathLib::add      # We want to have "add" public
-    PRIVATE # Only for curent target
-        myMathLib::Config
-        myMathLib::substract
-    INTERFACE   # Only for targets that will use it
-)
-
-# Create exec
-add_executable(hellolib main.cpp)
-target_link_libraries(
-    hellolib
-    PRIVATE
-        myMath
-)
+# # Create exec
+# add_executable(hellolib main.cpp)
+# target_link_libraries(
+#     hellolib
+#     PRIVATE
+#         myMath
+# )
 
 # Include test subdirectory
 if(BUILD_TESTING)
     add_subdirectory(test)
+endif()
+
+# Install dependencies - only if this is top-level standalone project (ex we do not use it as add_subdirecotry)
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    install(
+        EXPORT myMathLib-targets  # Export set file that we want to export
+        FILE myMathLibTargets.cmake     # Generated file exposing exported targets
+        NAMESPACE myMathLib::           # Expose the namespace - prefix added to all targets. It will be used by default, automatiaclly when we will likt if from other sources.
+        # DEstination of myMathLibTargets.cmake file. This is elated to CMAKE_INSTALL_PREFX. It will be installed
+        # in like ${CMAKE_INSTALL_PREFIX}/lib/config/myMathLib/myMathLibTargets.cmake
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/config/myMathLib
+    )
 endif()

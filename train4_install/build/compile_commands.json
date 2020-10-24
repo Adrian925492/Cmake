@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/repo/Cmake/train4_install/build/add",
+  "command": "/usr/bin/cc     -Wall -o CMakeFiles/add.dir/add.c.o   -c /repo/Cmake/train4_install/add/add.c",
+  "file": "/repo/Cmake/train4_install/add/add.c"
+},
+{
+  "directory": "/repo/Cmake/train4_install/build/substract",
+  "command": "/usr/bin/c++   -I/repo/Cmake/train4_install/substract/include    -Wall -Wpedantic -std=c++17 -o CMakeFiles/substract.dir/substract.cpp.o -c /repo/Cmake/train4_install/substract/substract.cpp",
+  "file": "/repo/Cmake/train4_install/substract/substract.cpp"
+},
+{
+  "directory": "/repo/Cmake/train4_install/build/myMath",
+  "command": "/usr/bin/c++   -I/repo/Cmake/train4_install/myMath/include -I/repo/Cmake/train4_install/add/include -I/repo/Cmake/train4_install/substract/include    -Wall -Wpedantic -std=c++17 -o CMakeFiles/myMath.dir/mymath.cpp.o -c /repo/Cmake/train4_install/myMath/mymath.cpp",
+  "file": "/repo/Cmake/train4_install/myMath/mymath.cpp"
+}
+]

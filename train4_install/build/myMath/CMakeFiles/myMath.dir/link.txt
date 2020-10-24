@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmyMath.a  CMakeFiles/myMath.dir/mymath.cpp.o ../substract/CMakeFiles/substract.dir/substract.cpp.o
+/usr/bin/ranlib libmyMath.a

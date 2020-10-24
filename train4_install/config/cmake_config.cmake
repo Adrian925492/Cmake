@@ -45,6 +45,32 @@ add_library(Config INTERFACE)
 # Add alias library - to not allow to modify Config lib by other that will use it
 add_library(${CMAKE_PROJECT_NAME}::Config ALIAS Config)
 
+# Install only if top-level project
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    # Include GNUInstall dirs - so we would know the directories
+    include(GNUInstallDirs)
+
+    # Print currently set install dirs
+    message(STATUS "CMAKE_INSTALL_PREFIX        = ${CMAKE_INSTALL_PREFIX}")
+    message(STATUS "CMAKE_INSTALL_LIBDIR        = ${CMAKE_INSTALL_LIBDIR}")
+    message(STATUS "CMAKE_INSTALL_BINARYDIR     = ${CMAKE_INSTALL_BINARYDIR}")
+    message(STATUS "CMAKE_INSTALL_INCLUDEDIR    = ${CMAKE_INSTALL_INCLUDEDIR}")
+
+    # Export config file - install it in installdir
+    install(
+        FILES
+            ${CMAKE_CURRENT_BINARY_DIR}/cmake_config.cmake
+        DESTINATION
+            ${CMAKE_INSTALL_LIBDIR}/config/myMathLib
+    )
+
+    # Export target config
+    install(TARGETS 
+        Config
+        EXPORT myMathLib-targets
+    )
+endif()
+
 # Set compiler settings - standard in that case
 target_compile_features(Config INTERFACE
     cxx_std_17

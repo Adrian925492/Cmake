@@ -1,4 +1,4 @@
-#include "substract.h"
+#include <substract/substract.h>
 
 int substraction::minus(int x, int y) noexcept
 {

@@ -4,28 +4,36 @@
 cmake_minimum_required(VERSION 3.14)
 
 # Define project - as we use other language, we can define new project here
-project(mySubstract VERSION 1.0.0 LANGUAGES C)
+project(add VERSION 1.0.0 LANGUAGES C)
 
 # Create add library (explicitly static)
 add_library(
     add
     STATIC
     add.c
-    add.h
+    include/add/add.h
 )
 
 # Define alias library - to not allow to change add lib by its users
-add_library(${CMAKE_PROJECT_NAME}::add ALIAS add)
+add_library(myMathLib::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 # Include current source directory (with header api) as an Interface to the project.
 # That will allow user of add to include it via <add.h>.
 target_include_directories(add
     INTERFACE
-        ${CMAKE_CURRENT_SOURCE_DIR}
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>      # If used directly from sources - include "include" directory
 )
 
-# Include compiler dependencies
-target_link_libraries(add
+# Include compiler dependencies and settings
+target_link_libraries(${PROJECT_NAME}
     PRIVATE
         myMathLib::Config
 )
+
+# Install - only if it would be top-level project
+if (CMAKE_PROJECT_NAME STREQUAL myMathLib)  # If that project is MyMath than install the sublibrary add
+    #Install add lib target as a part of myMath libs target
+    install(TARGETS add
+        EXPORT myMathLib-targets  # Export target to export set MyMath
+    )
+endif()
