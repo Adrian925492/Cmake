@@ -44,6 +44,6 @@ if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
         NAMESPACE myMathLib::           # Expose the namespace - prefix added to all targets. It will be used by default, automatiaclly when we will likt if from other sources.
         # DEstination of myMathLibTargets.cmake file. This is elated to CMAKE_INSTALL_PREFX. It will be installed
         # in like ${CMAKE_INSTALL_PREFIX}/lib/config/myMathLib/myMathLibTargets.cmake
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/config/myMathLib
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/myMathLib
     )
 endif()

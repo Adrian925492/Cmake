@@ -7,7 +7,8 @@ cmake_minimum_required(VERSION 3.14)
 project(hellolib VERSION 1.0.0)
 
 # set CMAKE_PREFIX_PATH - for find_package
-set(CMAKE_PREFIX_PATH /repo/Cmake/train4_install/install)
+set(CMAKE_PREFIX_PATH "/repo/Cmake/train4_install/install")
+message(STATUS "CMAKE_PREFIX_PATH:  ${CMAKE_PREFIX_PATH}")
 
 # Find installed package
 find_package(myMathLib REQUIRED)

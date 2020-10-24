@@ -1,4 +1,4 @@
-#include "mymath.h"
+#include <myMath/mymath.h>
 
 #include <iostream>
 

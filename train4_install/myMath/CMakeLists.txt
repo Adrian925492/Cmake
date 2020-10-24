@@ -11,7 +11,7 @@ add_library(myMath  #[can be STATIC or SHARED]
 
 # Define alias library - to not allow to change MyMath lib by its users
 # The used form would be myMathLib::myMath
-add_library(myMath::myMath ALIAS myMath)
+add_library(myMathLib::myMath ALIAS myMath)
 
 # Link dependencies
 target_link_libraries(myMath
