@@ -1,0 +1,17 @@
+# This is the template file for generating <LibName>Config.cmake file, used by find_package.
+
+# Basing on it the package (in CMake style) will be created and than can be imported by find_package.
+
+# That file will be processed by additional modules like configure file
+
+# Include required module
+include(CMakeFindDependencyMacro)
+
+# Set package version
+set(myMathLib_VERSION "@CMAKE_PROJECT_VERSION@")
+
+# Initialize package
+@PACKAGE_INIT@
+
+# Include the generated target export set file
+include(${CMAKE_CURRENT_LIST_DIR}/myMathLibTargets.cmake)

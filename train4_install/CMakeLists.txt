@@ -23,14 +23,6 @@ add_subdirectory(add)
 add_subdirectory(substract)
 add_subdirectory(myMath)
 
-# # Create exec
-# add_executable(hellolib main.cpp)
-# target_link_libraries(
-#     hellolib
-#     PRIVATE
-#         myMath
-# )
-
 # Include test subdirectory
 if(BUILD_TESTING)
     add_subdirectory(test)
