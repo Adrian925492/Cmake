@@ -1,0 +1,6 @@
+[submodule "train4_install/framework/googletest"]
+	path = train4_install/framework/googletest
+	url = https://github.com/google/googletest.git
+[submodule "train3_test/framework/googletest"]
+	path = train3_test/framework/googletest
+	url = https://github.com/google/googletest.git
