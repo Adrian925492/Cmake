@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/repo/Cmake/train3_test/test/substract/ut_substract.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ut_substract_label"
+		],
+		"name" : "substract_test"
+	}
+}

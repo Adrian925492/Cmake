@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/repo/Cmake/train3_test/substract/substract.cpp
+substract.h
+/repo/Cmake/train3_test/substract/substract.h
+
+/repo/Cmake/train3_test/substract/substract.h
+

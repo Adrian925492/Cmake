@@ -10,7 +10,7 @@ project(myMathLib VERSION 1.0.0)
 include(config/cmake_config.cmake)
 
 # Enable test module - in top - level CMakeLists.txt
-#include(CTest)
+include(CTest)
 
 # Include subdrectories - with add and substract library to the cmake tree
 # The tree will look like:

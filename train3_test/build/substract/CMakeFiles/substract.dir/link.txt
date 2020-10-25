@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsubstract.a  CMakeFiles/substract.dir/substract.cpp.o
+/usr/bin/ranlib libsubstract.a

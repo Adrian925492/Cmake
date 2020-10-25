@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/mymath_test.dir/ut_mymath.cpp.o  -o mymath_test  ../libmyMath.a /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a ../add/libadd.a ../substract/libsubstract.a /usr/local/lib/libgtest.a -lpthread 
